@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100,300,400|Lato:100,300,400');
+
+body {
+    font: 24px Lato;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+  margin: 0;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+main {
+  width: 100%;
+}
+
+nav {
+  color: rgb(100, 100, 100);
+  font-size: 16px;
+  font-weight: 300;
+}
+
+a:link, a:visited {
+  color: rgb(100, 100, 100);
+}
+
+a:hover {
+  color: rgb(160, 160, 160);
+}
