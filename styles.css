@@ -76,7 +76,6 @@ a:hover {
   position: relative;
   height: 100vh;
   text-align: center;
-  min-width: 120vw;
 }
 
 /*.gallery .item:before {

@@ -4,10 +4,13 @@ var SCROLL_INTERVAL_MS = 20;
 var appendGallery = function() {
   var gallery = $('<div class="gallery"/>');
   manifest.forEach(function(imageSet) {
-    imageSet.forEach(function(image) {
+    imageSet.forEach(function(image, i) {
       var imageUrl = 'images/' + image;
       var item = $('<div class="item"/>');
-      item.append('<img src="' + imageUrl + '"/>');
+      // Try to load images over time
+      setTimeout(function() {
+        item.append('<img src="' + imageUrl + '"/>');
+      }, i * 100);
       gallery.append(item);
     });
   });
