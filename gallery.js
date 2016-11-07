@@ -2,6 +2,7 @@ var SCROLL_AMOUNT_PX = 1;
 var SCROLL_INTERVAL_MS = 20;
 
 var appendGallery = function() {
+  var isFirst = $('.gallery').length > 0;
   var gallery = $('<div class="gallery"/>');
   manifest.forEach(function(imageSet) {
     imageSet.forEach(function(image, i) {
@@ -15,7 +16,7 @@ var appendGallery = function() {
     });
   });
   gallery.css({
-    left: $('.gallery').length > 0 ? $('#gallery-container').outerWidth() : 0
+    left: isFirst ? $('#gallery-container').outerWidth() : 0
   });
   $('#gallery-container').append(gallery);
 };
