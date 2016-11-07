@@ -1,24 +1,37 @@
 @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100,300,400|Lato:100,300,400');
 
 body {
-    font: 24px Lato;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-}
-
-h1 {
+  background-color: rgb(60, 40, 40);
+  font: 24px Lato;
+  text-align: center;
   margin: 0;
-  font-weight: 100;
-  text-transform: uppercase;
+  padding: 0;
 }
 
 main {
+  background-color: rgba(60, 40, 40, 0.5);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100vh;
+  position: absolute;
   width: 100%;
+  z-index: 100;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 1em;
+  text-align: center;
+  width: 100%;
+  z-index: 100;
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+  margin: 0;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
 nav {
@@ -27,10 +40,60 @@ nav {
   font-weight: 300;
 }
 
+main a:link, main a:visited {
+  color: rgb(200, 200, 200);
+}
+
+main a:hover {
+  color: rgb(0, 0, 0);
+}
+
 a:link, a:visited {
   color: rgb(100, 100, 100);
 }
 
 a:hover {
   color: rgb(160, 160, 160);
+}
+
+#gallery-container {
+  position: absolute;
+  overflow-x: hidden;
+  white-space: nowrap;
+  width: 100vw;
+}
+
+.gallery {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: auto;
+  white-space: nowrap;
+}
+
+.gallery .item {
+  display: inline-block;
+  position: relative;
+  height: 100vh;
+  text-align: center;
+  min-width: 120vw;
+}
+
+/*.gallery .item:before {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 1) 100%);
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 1) 100%);
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 1) 100%);
+  background: -ms-linear-gradient(left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 1) 100%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 1) 100%);
+}*/
+
+.gallery .item img {
+  display: inline-block;
+  height: 100vh;
 }
