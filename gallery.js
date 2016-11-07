@@ -10,9 +10,13 @@ var appendGallery = function() {
       var imageUrl = 'images/' + image;
       var item = $('<div class="item"/>');
       // Try to load images over time
-      setTimeout(function() {
+      if (i == 0) {
         item.append('<img src="' + imageUrl + '"/>');
-      }, i * 100);
+      } else {
+        setTimeout(function() {
+          item.append('<img src="' + imageUrl + '"/>');
+        }, i * 100);
+      }
       gallery.append(item);
     });
   });
